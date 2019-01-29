@@ -12,6 +12,4 @@ before_script:
 script:
 - ng lint
 - ng build --prod --base-href "https://luyunyyyyy.github.io/ng-todo/"
-- npx angular-cli-ghpages --dir=dist/todo --no-silent --repo = https://GH_TOKEN@github.com/organisation/ng-todo.git --name = "luyunyyyyy" --luyunyang1@foxmail.com
-
-
+- npx angular-cli-ghpages  --dir=dist/todo --no-silent --repo=https://GH_TOKEN@github.com/organisation/ng-todo.git --name="luyunyyyyy" --email=luyunyang1@foxmail.com
