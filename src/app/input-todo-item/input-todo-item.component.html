@@ -1,3 +1,10 @@
-<p>
+<!-- <p>
   input-todo-item works!
-</p>
+</p> -->
+<div>
+  <div><button (click)="onClickCloseAllTodoItem()">完成所有TODO</button></div>
+  <div>
+    <input #box (keyup.enter)="onEnter(box.value)" placeholder="Todo 内容"/>
+    <p>{{ currentTodoItemContent }}</p>
+  </div>
+</div>

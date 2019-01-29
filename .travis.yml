@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "9"
+dist: trusty
+sudo: required
+branches:
+  only:
+  - master
+before_script:
+  - npm install -g @angular/cli
+  - npm i angular-cli-ghpages --save-dev
+script:
+- ng lint
+- ng build --prod --base-href "https://luyunyyyyy.github.io/ng-todo/"
+- npx angular-cli-ghpages --dir=dist/todo --no-silent
+

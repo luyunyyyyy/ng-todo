@@ -1,0 +1,13 @@
+<!-- <p>
+  todo-list works!
+</p> -->
+<section class="main" *ngIf="todoList.length > 0">
+  <h2>My Todo List</h2>
+  <ul class="heroes">
+    <li *ngFor="let item of todoList" [class.completed]="item.state">
+      <input type="checkbox" (click)="toggleTodoComplete(item)" [checked]="item.state">
+      <span class="badge">{{item.id}}</span> {{item.name}}
+      <button class="destroy" (click)="removeTodo(item)"></button>
+    </li>
+  </ul>
+</section>
